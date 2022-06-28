@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\with-fqdn",
+    "\\with-fqdn\\container-1-node",
+    "\\with-fqdn\\container-1-node\\routes",
+    "\\with-fqdn\\deploy"
+  ],
+  "SelectedNode": "\\with-fqdn\\container-1-node\\routes\\hello.js",
+  "PreviewInSolutionExplorer": false
+}

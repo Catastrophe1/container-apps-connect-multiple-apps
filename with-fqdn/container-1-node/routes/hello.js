@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const axios = require('axios').default;
-const dotnetFQDN = process.env.DOTNET_FQDN;
+const dotnetFQDN = 'dotnet-app-dapr.internal.salmoncliff-6322efe2.eastus.azurecontainerapps.io';
 
 /* GET users listing. */
 router.get('/', async  function(req, res, next) {
