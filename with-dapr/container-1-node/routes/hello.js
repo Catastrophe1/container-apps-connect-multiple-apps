@@ -9,10 +9,12 @@ router.get('/', async  function(req, res, next) {
 
   if(dotnetAppId)  {
     // Because we're using Dapr here, it will add mTLS, retries, and advanced telemetry
+    var t = process.hrtime();
     var data = await axios.get(`http://localhost:${daprPort}/hello`, {
       headers: {'dapr-app-id': `${dotnetAppId}`} //sets app name for service discovery
     });
-    res.send(`${JSON.stringify(data.data)}`);
+    t = process.hrtime(t);
+    res.send(`${JSON.stringify(data.data) + JSON.stringify(t)}`);
   }
   else {
     res.send('No DOTNET_APP_ID env variable defined. Be sure to set an env variable for the DOTNET_APP_ID for Dapr')
